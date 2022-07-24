@@ -31,7 +31,7 @@ public class Main {
         logger.info("Окончание скачек. Победитель: {}", winnerName);
     }
 
-    private static void watch(Hippodrome hippodrome) {
+    private static void watch(Hippodrome hippodrome) throws Exception {
         hippodrome.getHorses().stream()
                 .map(horse -> ".".repeat((int) horse.getDistance()) + horse.getName())
                 .forEach(System.out::println);
